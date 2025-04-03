@@ -163,10 +163,11 @@ export default function About() {
 
             {/* Average Rating */}
             <div className="text-center mb-3">
-            <p className="text-lg font-semibold text-black dark:text-white">
+           <p className="text-lg font-semibold text-black dark:text-white">
               ⭐ {averageRating} / 5
             </p>
             <p className="text-sm text-black dark:text-gray-400">{totalVoters} ulasan</p>
+
 
             </div>
 
