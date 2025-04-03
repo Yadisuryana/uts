@@ -104,18 +104,18 @@ export default function About() {
       <AnimatePresence>
         {showChatbot && (
           <motion.div
-            className="fixed top-16 right-4 w-80 h-64 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-300"
+          className="fixed top-16 right-4 w-80 h-64 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-300 text-black dark:text-white"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 100, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <h3 className="font-bold mb-2 text-center">Chatbot FAQ</h3>
+            <h3 className="font-bold mb-2 text-center text-black dark:text-white">Chatbot FAQ</h3>
             <div className="h-40 overflow-y-auto border p-2 mb-2">
               {selectedQuestion ? (
                 <div>
-                  <p className="font-semibold">{selectedQuestion.question}</p>
-                  <p>{selectedQuestion.answer}</p>
+                  <p className="font-semibold text-black dark:text-white">{selectedQuestion.question}</p>
+                  <p className="text-black dark:text-white">{selectedQuestion.answer}</p>
                   <button
                     onClick={() => setSelectedQuestion(null)}
                     className="mt-2 text-blue-500 hover:underline"
