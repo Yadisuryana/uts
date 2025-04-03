@@ -163,16 +163,17 @@ export default function About() {
 
             {/* Average Rating */}
             <div className="text-center mb-3">
-              <p className="text-lg font-semibold">
-                ⭐ {averageRating} / 5
-              </p>
-              <p className="text-sm text-gray-500">{totalVoters} ulasan</p>
+            <p className="text-lg font-semibold text-black dark:text-white">
+              ⭐ {averageRating} / 5
+            </p>
+            <p className="text-sm text-black dark:text-gray-400">{totalVoters} ulasan</p>
+
             </div>
 
             {loading ? (
               <p className="text-gray-500">Loading...</p>
             ) : feedbacks.length > 0 ? (
-              <ul className="max-h-52 overflow-y-auto">
+              <ul className="max-h-52 overflow-y-auto text-black dark:text-white">
                 {feedbacks.slice(0, 5).map((f) => (
                   <li key={f.id} className="border-b border-gray-300 pb-2 mb-2 text-sm">
                     <p className="font-semibold">{f.name} ⭐ {f.rating}</p>
